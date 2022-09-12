@@ -16,7 +16,7 @@ public class Board {
     private List<SpecialEntity> specialEntities;
 
     public void printBoard(){
-        int count=1;
+        int count=0;
         for(int i =0; i<this.dimension*this.dimension;i++){
                 int flag=0;
                 for(SpecialEntity specialEntity:specialEntities){
@@ -26,6 +26,8 @@ public class Board {
                     }
                 }
                 count++;
+                if(flag==0)
+                    System.out.print(count + " ");
                 if(count%dimension==0)  {  
                     System.out.println();
                 }
